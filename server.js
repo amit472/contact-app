@@ -83,7 +83,7 @@ var user = mongoose.model('user',{
 }); 
 // API =================================
 app.post('/add',verifyTokenAPI ,(req,res)=>{
-    console.log('req.body',req.body)
+    // console.log('req.body',req.body)
     var userDetail = new contact({
         email: req.body.email,
          name: req.body.name,
@@ -124,17 +124,17 @@ app.get('/contactlist',verifyTokenAPI,(req,res)=>{
          number:req.body.num
      };
  var oldemail = req.body.oldemail;
- console.log("3333333333333",oldemail,req.currentUser.email)
+//  console.log("3333333333333",oldemail,req.currentUser.email)
  contact.findOneAndUpdate({email:oldemail,admin:req.currentUser.email},detail)
  .then((doc)=>{
-     console.log("update",doc)
+    //  console.log("update",doc)
      if(doc){
          res.send({status: true, message:'Contact Updated'});
      }else{
          res.send({status: false, message:'Contact not found'});
      }
  },(e)=>{
-     console.log("err",e)
+    //  console.log("err",e)
      res.send({status: false, message: 'Contact not Updated'});
  });
 

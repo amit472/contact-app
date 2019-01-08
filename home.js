@@ -47,7 +47,7 @@ function ContactList(){
 
 
 function editRow(id){
-    console.log('id',id);
+    // console.log('id',id);
     var j=id.slice(4);
     // console.log(j)
     document.getElementsByClassName(`row${j}`)[0].setAttribute("contenteditable","true");
@@ -68,7 +68,7 @@ function updateRow(id){
     var num = document.getElementById(`num${k}`).innerHTML;
   
    axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('jwtToken');
-   console.log("111111111",oldemail,name,email,num)
+//    console.log("111111111",oldemail,name,email,num)
     axios.post('/update',{name:name,email:email,num:num,oldemail:oldemail})
     .then((doc)=>{
         //console.log(doc);
