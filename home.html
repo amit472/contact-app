@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.js"></script>  
+
+    
+</head>
+<body onload="ContactList()">
+        <div class="jumbotron text-center">
+                <h1>Contact App</h1>
+        </div>
+    <div class="container">
+            <form>
+                <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="name" class="form-control" id="name" placeholder="Enter Name" name="name">
+                      </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="mobile">Mobile Number:</label>
+                  <input type="mobile" class="form-control" id="Number" placeholder="Enter Number" name="mobile">
+                </div>
+                <button type="button" class="btn btn-default" onclick="saveContact()">Add</button>
+                <a type="button" href="/profile1" class="btn btn-default">Profile</a>
+                <button type="button" class="btn btn-default" onclick="logout()">Logout</button>
+                <br>
+                <br>
+                <br>
+                <div class="text-center">
+                        <h2>Contact List</h2>
+                </div>
+                <div class="text-center">
+                    <table  width = "100%">
+                            <thead>
+                                <tr style="background-color: lightslategray;">
+                                    <td id="abc"><b>NAME</b></td>
+                                    <td id="xyz"><b>EMAIL</b></td>
+                                    <td><b>NUMBER</b></td>
+                                    <td><b>EDIT/UPDATE</b></td>
+                                    <td><b>DELETE</b></td>
+                                </tr>
+                            </thead><tbody id='contactTableBody'>
+
+                            </tbody>
+                                                                        
+                    </table>
+                </div>
+
+            </form>
+    </div>
+    <script src="home.js"></script>
+
+</body>
+</html>

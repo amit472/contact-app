@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <style>
+        .login-center{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row login-center">
+            <div class="col-md-4" style=" border: 1px solid black; padding: 25px 75px 75px 100px; background-color: lightblue;;">
+                <h1 class="text-center" style="font-family: serif">Login Page</h1>
+                    <form>
+                        <div class="input-group" style="background-color: lightgrey;">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email">
+                        </div>
+                        <div class="input-group" style="background-color: lightgrey;">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input type="text" class="form-control" id="pwd" placeholder="Enter Password" name="Password">
+                        </div>
+                        <div>
+                                <div class="checkbox">
+                                        <label><input type="checkbox" name="remember"> Remember me</label>
+                                </div>
+                                <button type="button" class="btn btn-default"  onclick="login()">Login</button>
+                                <a href="/signup">SignUp</a>
+                        </div>
+                    </form> 
+            </div>
+        </div>
+    
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src='/login.js'></script>
+</body>
+</html>
